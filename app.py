@@ -17,7 +17,10 @@ stop_words = set(stopwords.words('english'))
 load_dotenv()
 
 openai_key = os.getenv("OPENAI_KEY")
-# 만약 openapi key가 없다면 아래에 추가 
+# 만약 openapi key가 없다면 아래의 주석 해제
+# if openai_key is None:
+#     openai_key = "본인의 api 값 입력"
+
 
 if openai_key is None or openai_key == "":
     sys.exit("Please Provide Your OpenAI API Key")
